@@ -6,6 +6,11 @@
           name='viewport'>
     <title>Offline for maintenance | Heroku </title>
     <link rel='shortcut icon' type='image/x-icon' href='https://www.herokucdn.com/favicon.ico'>
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="./slds.css"
+    />
     <style>
         html, body {
             font-family: sans-serif;
@@ -119,7 +124,7 @@
             class='app-icon' fill-rule='evenodd' />
     </svg>
     <div class='message__title'> Offline </div>
-    <a href="https://salesforce-access-checker.herokuapp.com/"> This app was moved to another page </a>
+    <a href="https://salesforce-access-checker.herokuapp.com/" onclick="document.querySelector('.spinner').classList.remove('slds-hide')"> This app was moved to another page </a>
 </div>
 <div class='logo'>
     <svg width='85' height='24' xmlns='http://www.w3.org/2000/svg'>
@@ -131,5 +136,16 @@
         </g>
     </svg>
 </div>
+
+<div class="spinner slds-hide">
+    <div class="demo-only" style="height:6rem">
+        <div role="status" class="slds-spinner slds-spinner_medium">
+            <div class="slds-spinner__dot-a"></div>
+            <div class="slds-spinner__dot-b"></div>
+        </div>
+    </div>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+</div>
+
 </body>
 </html>
